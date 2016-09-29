@@ -1,0 +1,24 @@
+def is_matched(expression):
+    stk=[]
+    d ={'(' : ')', '{' : '}', '[': ']'}
+
+    for item in (expression):
+        if item in d.keys():
+            stk.append(item)
+        elif item in d.values():
+            if len(stk) == 0 or d[stk.pop()] != item:
+                return 0         
+    if(len(stk) !=0):
+        return 0
+    return 1
+    pass
+
+t = int(raw_input().strip())
+for a0 in xrange(t):
+    expression = raw_input().strip()
+    if is_matched(expression) == True:
+        print "YES"
+    else:
+        print "NO"
+        
+## t = no of input strings to be tested
