@@ -1,0 +1,15 @@
+
+from collections import OrderedDict
+n = input()
+d = OrderedDict()
+for i in range(n):
+    x,y = raw_input().rsplit(" ", 1)
+    if x in d.keys():
+        d[x]= d[x]+int(y)
+    else:
+        d[x]=int(y)
+for tmp in d.items():
+    print " ".join(map(str,tmp))
+    
+    
+## n -> number of next string inputs containing items and their price
