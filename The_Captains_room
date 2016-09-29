@@ -1,0 +1,15 @@
+k = int(input())
+n = list(map(int,input().strip().split()))
+
+#method 1
+#for i in n:
+#    if (n.count(i) == 1):
+#        print(i)
+#        break
+
+#method 2
+print(int(((k* sum(set(n))) - sum(n))/(k-1)))
+
+##inputs ##
+## k = size of each group
+## string of unordered room numbers alloted
