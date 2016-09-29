@@ -1,0 +1,11 @@
+
+from collections import OrderedDict
+d = OrderedDict()
+for i in range(input()):
+    x = raw_input()
+    d[x]= d.setdefault(x,0)+1
+
+print len(d)
+print " ".join(map(str,d.values()))
+
+## n - no. of integers to be entered next
