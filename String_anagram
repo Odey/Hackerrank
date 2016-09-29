@@ -1,0 +1,18 @@
+from collections import Counter
+def number_needed(a, b):
+    da = Counter(list(a))
+    db = Counter(list(b))
+    result = 0
+    symm_diff = set(da.viewitems())^set(db.viewitems())
+
+    for item in symm_diff:
+        result = result + item[1]
+        if item[0] in set(da.keys())& set(db.keys()):
+            result= result - min(da[item[0]], db[item[0]])
+    return result
+    pass
+
+a = raw_input().strip()
+b = raw_input().strip()
+
+print number_needed(a, b)
