@@ -1,0 +1,16 @@
+counter=0
+def has_cycle(head):
+    global counter
+    counter+=1
+    first=head
+    head_2=head
+    while(head and head_2 and head.next):
+            if head==head_2:
+                return 1
+                
+            head=head.next
+            head_2=head.next.next
+    return 0    
+   
+    print "counter:"+str(counter)
+    
