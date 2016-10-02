@@ -1,0 +1,12 @@
+n = int(raw_input().strip())
+a = map(int, raw_input().strip().split(' '))
+swap_no =0
+for i in range(n):
+    for j in range(n-1):
+        if a[j] >= a[j+1]:
+            a[j], a[j+1] = a[j+1],a[j]
+            swap_no +=1
+print "Array is sorted in {} swaps.".format(swap_no)
+print "First Element: {}".format(int(a[0]))
+print "Last Element: {}".format(int(a[n-1]))
+            
