@@ -1,0 +1,17 @@
+cntcts=[]
+count =0
+n = int(raw_input().strip())
+for a0 in xrange(n):
+    op, contact = raw_input().strip().split(' ')
+    if op=="add":
+        cntcts.append(contact)
+    
+    if op=="find":
+        l = filter(lambda x: x.startswith(contact), cntcts)
+        count = len(l)
+        #count = sum(1 for x in cntcts if x.startswith(contact))
+        #for item in cntcts:
+         #   if item.startswith(contact):
+        #        count +=1
+        print count
+        count = 0
